@@ -1,0 +1,79 @@
+/* Mirys Cleanings — mobile refinements.
+   Loaded AFTER styles.css; desktop layout remains unchanged. */
+@media (max-width: 680px) {
+  html { scroll-padding-top: 16px; }
+  body { overflow-x: hidden; }
+  .container { width: min(100% - 36px, 1140px); }
+
+  /* Header & collapsible navigation */
+  .site-header { position: relative; }
+  .nav-wrap { min-height: 72px; }
+  .brand { min-width: 0; font-size: 17px; gap: 9px; }
+  .brand img { width: 42px; height: 42px; flex: none; }
+  .menu-toggle { min-width: 44px; min-height: 44px; display: grid; align-content: center; justify-items: center; border-radius: 12px; }
+  .menu-toggle:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #ad6597; outline-offset: 3px; }
+  #nav { top: 72px; padding: 18px; gap: 7px; }
+  #nav a { display: block; padding: 12px 14px; border-radius: 12px; }
+  #nav .nav-cta { text-align: center; }
+
+  /* Smaller hero with a clear call to action */
+  .hero-grid { padding: 36px 0 65px; gap: 6px; }
+  .hero-copy { min-width: 0; }
+  .eyebrow { max-width: 100%; font-size: 11px; letter-spacing: 0; }
+  .hero h1 { font-size: clamp(36px, 9.5vw, 49px); letter-spacing: -1.5px; line-height: 1.12; margin: 18px 0 14px; overflow-wrap: anywhere; }
+  .hero-copy > p { max-width: 34ch; margin-bottom: 0; font-size: 15px; line-height: 1.65; }
+  .hero-actions { width: 100%; max-width: 380px; gap: 10px; margin: 23px 0; }
+  .hero-actions .button { flex: 1 1 100%; min-height: 50px; }
+  .hero-trust { max-width: 34ch; line-height: 1.8; }
+  .hero-art { height: 240px; margin-top: 12px; }
+  .hero-logo { width: min(225px, 72vw); }
+  .hero-art-bg { width: min(250px, 80vw); }
+  .floating-note { right: 0; bottom: 0; padding: 10px 12px; font-size: 11px; }
+  .note-star { font-size: 22px; }
+
+  /* Services and general sections */
+  .section { padding: 62px 0; }
+  .section-heading { margin-bottom: 28px; }
+  h2 { font-size: clamp(31px, 8vw, 39px); letter-spacing: -1px; }
+  .service-grid { gap: 18px; }
+  .service-card { max-width: none; }
+  .service-photo { height: clamp(175px, 52vw, 230px); }
+  .service-text { padding: 20px 22px 24px; }
+  .service-text a { display: inline-flex; align-items: center; min-height: 44px; }
+  .about-band { padding: 56px 0; }
+  .about-visual { height: 250px; }
+  .about-circle { width: 235px; }
+  .steps { gap: 15px; }
+  .steps article { padding: 10px 15px; }
+  .step-number { margin-bottom: 12px; }
+
+  /* Thumb-friendly quote form */
+  .quote-section { padding: 58px 0; }
+  .quote-grid { gap: 24px; }
+  .quote-copy h2 { font-size: clamp(37px, 9vw, 48px); }
+  .quote-form { padding: 22px 18px; border-radius: 20px; }
+  .quote-form h3 { font-size: 22px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .quote-form label { font-size: 13px; margin-bottom: 15px; }
+  .quote-form input, .quote-form select, .quote-form textarea {
+    min-height: 48px; font-size: 16px; padding: 12px 13px;
+  }
+  .quote-form textarea { min-height: 120px; }
+  .submit-button { min-height: 52px; }
+  .footer { padding: 30px 0; }
+  .footer-inner { gap: 18px; }
+  .footer-right { gap: 12px; }
+}
+
+@media (max-width: 360px) {
+  .container { width: calc(100% - 28px); }
+  .brand { font-size: 15px; }
+  .hero h1 { font-size: 35px; }
+  .floating-note { transform: none; }
+  .check-grid { gap: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .service-card { transition: none; }
+}
